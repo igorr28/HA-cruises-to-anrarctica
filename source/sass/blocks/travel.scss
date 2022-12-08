@@ -1,0 +1,74 @@
+.travel__container {
+  padding: 120px 0 145px;
+  display: flex;
+  align-items: start;
+
+  @include vp-1023 {
+    padding: 100px calc(5 / 678) * 100% 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 65px 0 85px;
+    flex-direction: column;
+  }
+}
+
+.travel__content {
+  width: calc(512 / 1160) * 100%;
+  margin-right: calc(88 / 1160) * 100%;
+  padding-top: 20px;
+
+  @include vp-1023 {
+    width: calc(324 / 678) * 100%;
+    margin-right: calc(25 / 678) * 100%;
+    padding-top: 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.travel__img-wrapper {
+  width: calc(560 / 1160) * 100%;
+
+  @include vp-1023 {
+    width: calc(324 / 678) * 100%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.travel__content h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.4;
+
+  @include vp-1023 {
+    margin-bottom: 30px;
+    font-size: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+  }
+}
+
+.travel__content p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @include vp-1023 {
+    margin-bottom: 15px;
+  }
+}
