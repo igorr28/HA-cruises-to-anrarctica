@@ -6,18 +6,20 @@
 $color-default-black:               #000000;
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
-$color-default-text:                #011C40;
+$color-default-text:                #011c40;
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-dodger-blue:                 #1C6DEE;
-$color-alice-blue:                  #F9FBFD;
-$color-solitude:                    #E3ECF6;
+$color-dodger-blue:                 #1c6dee;
+$color-alice-blue:                  #f9fbfd;
+$color-solitude:                    #e3ecf6;
+$color-gorse:                       #ffd740;
+$color-nobel:                       #9d9d9d;
 
 // Gradient
 
-$adv-gradient:                      linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011C40 100%);
+$adv-gradient:                      linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
 
 // Typography
 // ---------------------------------

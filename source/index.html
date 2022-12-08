@@ -14,10 +14,54 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+
+      <!-- Header -->
+      <header class="main-header header main-header--no-js">
+        <div class="container">
+          <div class="main-header__container">
+            <!-- logo -->
+            <a class="logo main-header__logo">
+              <svg class="logo__img"  width="70" height="38" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>
+              <span class="visually-hidden">Логотип сайта "Круизы в Антарктику".</span>
+            </a>
+            <!-- Navigation -->
+            <nav class="main-nav main-header__nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link main-nav__link--current">Преимущества</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Направления</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Ближайшие круизы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Burger-menu -->
+            <button class="main-header__button-toogle button-toogle" type="button">
+              <svg class="button-toogle__img-open" width="24" height="14" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#burger"></use>
+              </svg>
+              <svg class="button-toogle__img-close" width="13" height="13" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite_auto.svg#burger-close"></use>
+              </svg>
+              <span class="visually-hidden">Переключить состояние меню.</span>
+            </button>
+          </div>
+        </div>
       </header>
       <main>
+
+        <!-- Promo -->
+        <section class="promo">
+
+        </section>
         <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
@@ -28,7 +72,7 @@
           </div>
         </section>
       </main>
-      <footer>
+      <footer class="main-footer footer">
         <div class="container"></div>
       </footer>
     </div>
