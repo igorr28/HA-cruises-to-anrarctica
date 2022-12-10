@@ -30,7 +30,7 @@
             <nav class="main-nav main-header__nav">
               <ul class="main-nav__list">
                 <li class="main-nav__item">
-                  <a href="#" class="main-nav__link main-nav__link--current">Преимущества</a>
+                  <a href="#" class="main-nav__link main-nav__link">Преимущества</a>
                 </li>
                 <li class="main-nav__item">
                   <a href="#" class="main-nav__link">Направления</a>
@@ -98,12 +98,67 @@
         </section> -->
       </main>
       <footer class="main-footer footer">
-        <div class="container"></div>
+        <div class="container">
+          <div class="main-footer__container">
+            <!-- logo -->
+            <a class="logo main-footer__logo">
+              <svg class="logo__img"  width="70" height="38" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>
+              <span class="visually-hidden">Логотип сайта "Круизы в Антарктику".</span>
+            </a>
+            <div class="main-nav main-footer__nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link main-nav__link--footer">Преимущества</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link main-nav__link--footer">Направления</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link main-nav__link--footer">Ближайшие круизы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link main-nav__link--footer">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="socials main-footer__socials">
+              <h3 class="visually-hidden">Мы в соцсетях.</h3>
+              <ul class="socials__list">
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__link-img socials__link-img--ok"  width="12" height="20" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite_auto.svg#social-1"></use>
+                    </svg>
+                    <span class="visually-hidden">Одноклассники.</span>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__link-img socials__link-img--dzen"  width="20" height="20" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite_auto.svg#social-2"></use>
+                    </svg>
+                    <span class="visually-hidden">Дзен.</span>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__link-img socials__link-img--reddit"  width="20" height="20" aria-hidden="true" focusable="false">
+                      <use xlink:href="img/sprite_auto.svg#social-3"></use>
+                    </svg>
+                    <span class="visually-hidden">Реддит.</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <!-- <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
@@ -129,7 +184,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

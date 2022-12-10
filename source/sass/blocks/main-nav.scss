@@ -17,6 +17,11 @@
   margin: -5px -16px;
   list-style: none;
 
+  @include vp-1023 {
+    margin-right: -11px;
+    margin-left: -11px;
+  }
+
   @include vp-767 {
     flex-direction: column;
     align-items: start;
@@ -28,6 +33,11 @@
 .main-nav__item {
   margin: 5px 16px;
   max-width: 190px;
+
+  @include vp-1023 {
+    margin-right: 11px;
+    margin-left: 11px;
+  }
 
   @include vp-767 {
     margin-left: 0;
@@ -58,12 +68,18 @@
   }
 
   &:focus-visible {
-    color: $color-gorse;
     outline: 1px solid $color-gorse;
     outline-offset: 2px;
   }
 
   &:active {
     opacity: 0.7;
+  }
+
+  &--footer {
+    @include vp-1023 {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 }
