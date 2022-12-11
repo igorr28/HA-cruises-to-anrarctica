@@ -49,13 +49,6 @@
   }
 }
 
-.main-header--no-js .main-nav__item,
-.is-menu-opened .main-nav__item {
-  @include vp-767 {
-    width: 100%;
-  }
-}
-
 .main-header--no-js .main-nav__link,
 .is-menu-opened .main-nav__link {
   @include vp-767 {
