@@ -1,0 +1,43 @@
+.btn {
+  min-width: 100px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  font-family: inherit;
+  font-weight: 600;
+  color: $color-default-text;
+  text-align: center;
+  background-color: $color-alice-blue;
+  border: none;
+  cursor: pointer;
+  transition: $trans-default;
+
+  &:hover {
+    background-color: $color-gorse;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-gorse;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: $color-default-white;
+    color: $color-nobel;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    background-color: $color-default-white;
+    color: $color-nobel;
+    pointer-events: none;
+  }
+}

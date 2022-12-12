@@ -1,0 +1,117 @@
+.card {
+  position: relative;
+  overflow: hidden;
+
+  &:hover .card__content,
+  &:focus .card__content,
+  &:focus-within .card__content {
+    left: 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-gorse;
+    outline-offset: 2px;
+  }
+
+  &:hover figure {
+    transform: translateX(100%);
+  }
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: 35px 25px;
+  overflow: auto;
+  background-color: $color-default-text;
+  color: $color-alice-blue;
+  transition: $trans-default;
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+
+  @include vp-1023 {
+    padding: 35px;
+  }
+}
+
+.card__content h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.card__content dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card__content dt {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.card__content dd {
+  margin-left: 0;
+  margin-bottom: 20px;
+  font-weight: 40;
+  color: #d8d8d9;
+}
+
+.card__figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  aspect-ratio: 260/386;
+  transition: $trans-default;
+
+  @include vp-1023 {
+    aspect-ratio: 309/386;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 270/386;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: $catalog-gradient;
+  }
+}
+
+.card__figure img {
+  margin-left: -117px;
+  max-width: none;
+  width: auto;
+  height: 100%;
+
+  @include vp-1023 {
+    margin-left: -96px;
+  }
+
+  @include vp-767 {
+    margin-left: -116px;
+  }
+}
+
+.card__figure-title {
+  position: absolute;
+  bottom: 30px;
+  left: calc(30 / 260) * 100%;
+  z-index: 5;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $color-alice-blue;
+}
