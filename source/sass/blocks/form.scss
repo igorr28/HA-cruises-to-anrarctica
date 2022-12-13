@@ -1,0 +1,78 @@
+.form {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-default-text;
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+
+  @include vp-767 {
+    padding: 40px 30px;
+  }
+}
+
+.form p {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $color-alice-blue;
+
+  @include vp-767 {
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="email"],
+.form textarea {
+  width: 100%;
+  padding: 11px 16px;
+  margin-bottom: 20px;
+  background-color: $color-alice-blue;
+  border: none;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $color-default-text;
+  transition: $trans-default;
+
+  &:hover {
+    background-color: $color-nobel;
+  }
+
+  &:focus {
+    outline: 2px solid $color-gorse;
+    outline-offset: 2px;
+    background-color: $color-nobel;
+  }
+
+  &:disabled {
+    color: rgba($color-default-text, 0.3);
+    background-color: rgba($color-nobel, 0.3);
+    pointer-events: none;
+  }
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: rgba($color-default-text, 0.7);
+}
+
+.form__error {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  padding: 3px 10px;
+  margin-top: -3px;
+  color: $color-red;
+  font-size: 13px;
+  line-height: 1.15;
+  background-color: $color-alice-blue;
+  border-radius: 3px;
+}
+
+.form__control {
+  margin-bottom: 30px;
+}

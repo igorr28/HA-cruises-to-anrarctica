@@ -1,0 +1,67 @@
+.control {
+  display: flex;
+  align-items: center;
+}
+
+.control input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.control__mark-checkbox {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  background-color: $color-alice-blue;
+  flex-shrink: 0;
+  transition: transform $trans-default;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: none;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/svg/form-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.control input:checked + .control__mark-checkbox::before {
+  display: block;
+}
+
+.control input:hover + .control__mark-checkbox {
+  transform: scale(1.3);
+  background-color: $color-nobel;
+}
+
+.control input:focus + .control__mark-checkbox {
+  outline: 2px solid $color-gorse;
+  outline-offset: 2px;
+}
+
+.control input:disabled + .control__mark-checkbox {
+  opacity: 0.3;
+  transform: none;
+  pointer-events: none;
+}
+
+.control__label {
+  font-size: 10px;
+  line-height: 1.3;
+  color: $color-alice-blue;
+}
