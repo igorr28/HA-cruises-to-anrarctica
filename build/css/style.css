@@ -2174,6 +2174,38 @@ button,
     text-align: center;
   }
 
+  .contacts__container {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .contacts__map {
+    width: 100%;
+    max-width: 590px;
+    height: 316px;
+    margin-right: 0;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+
+  .contacts__description {
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .contacts__item--address {
+    margin-bottom: 30px;
+  }
+
   .main-footer__container {
     padding-top: 40px;
     padding-bottom: 40px;
