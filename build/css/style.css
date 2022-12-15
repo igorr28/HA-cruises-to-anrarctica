@@ -1282,7 +1282,7 @@ button,
   padding: 11px 16px;
   margin-bottom: 20px;
   background-color: #f9fbfd;
-  border: none;
+  border: 3px solid #f9fbfd;
   font-size: 14px;
   line-height: 1.5;
   color: #011c40;
@@ -1295,7 +1295,7 @@ button,
 .form input[type=tel]:hover,
 .form input[type=email]:hover,
 .form textarea:hover {
-  background-color: #9d9d9d;
+  border-color: #ffd740;
 }
 
 .form input[type=text]:focus,
@@ -1304,7 +1304,6 @@ button,
 .form textarea:focus {
   outline: 2px solid #ffd740;
   outline-offset: 2px;
-  background-color: #9d9d9d;
 }
 
 .form input[type=text]:disabled,
@@ -1417,7 +1416,6 @@ button,
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
-  background-color: #9d9d9d;
 }
 
 .control input:focus + .control__mark-checkbox {
@@ -1530,10 +1528,15 @@ button,
   height: 100%;
 }
 
+.map--no-js .map__img-wrapper {
+  display: block;
+}
+
 .map__img-wrapper {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: none;
 }
 
 .map__img-wrapper img {
