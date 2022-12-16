@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   initMainMenu();
   initFormValidation();
+  // eslint-disable-next-line no-undef
   ymaps.ready(initMap);
   scrollTo();
 

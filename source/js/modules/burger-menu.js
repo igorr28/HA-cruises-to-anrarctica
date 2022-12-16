@@ -23,11 +23,11 @@ const initMainMenu = () => {
     document.removeEventListener('click', onClickMenuOut);
   };
 
-  const onMenuKeydownEsc = (evt) => {
-    const isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
+  const onMenuKeydownEsc = (e) => {
+    const isEscKey = e.key === 'Escape' || e.key === 'Esc';
 
     if (isEscKey && header.classList.contains('is-menu-opened')) {
-      evt.preventDefault();
+      e.preventDefault();
       closeMenu();
     }
   };

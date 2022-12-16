@@ -13,11 +13,13 @@ const initMap = () => {
 };
 
 function init() {
+  // eslint-disable-next-line no-undef
   let myMap = new ymaps.Map(map, {
     center: CENTER_COORDS,
     zoom: DEFAULT_SCALE,
   });
 
+  // eslint-disable-next-line no-undef
   const myPlacemark = new ymaps.Placemark(MARKER_COORDS, {
     balloonContent: 'г. Санкт-Петербург,<br> ул. Большая Конюшенная, 19/8',
     hintContent: 'г. Санкт-Петербург,<br> ул. Большая Конюшенная, 19/8',

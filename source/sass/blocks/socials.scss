@@ -1,5 +1,5 @@
 .socials__list {
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 0;
   padding-left: 0;
   display: grid;
@@ -9,6 +9,7 @@
   list-style: none;
 
   @include vp-1023 {
+    margin-top: -4px;
     grid-template-columns: repeat(3, 26px);
     column-gap: 11px;
   }

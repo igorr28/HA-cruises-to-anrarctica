@@ -1,5 +1,5 @@
 .form {
-  padding: 50px;
+  padding: 45px 50px 53px;
   display: flex;
   flex-direction: column;
   background-color: $color-default-text;
@@ -12,7 +12,7 @@
 
 .form p {
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
@@ -29,7 +29,7 @@
 .form input[type="email"],
 .form textarea {
   width: 100%;
-  padding: 11px 16px;
+  padding: 8px 16px;
   margin-bottom: 20px;
   background-color: $color-alice-blue;
   border: 3px solid $color-alice-blue;
@@ -74,4 +74,8 @@
 
 .form__control {
   margin-bottom: 30px;
+
+  @include vp-767 {
+    margin-bottom: 24px;
+  }
 }

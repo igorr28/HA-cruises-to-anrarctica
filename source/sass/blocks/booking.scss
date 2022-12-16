@@ -29,20 +29,20 @@
 }
 
 .booking__container {
-  padding: 50px calc(60 / 1160) * 100%;
+  padding: 49px calc(60 / 1160) * 100%;
   display: flex;
-  align-items: center;
 
   @include vp-1023 {
-    padding-top: 100px;
+    padding-top: 88px;
     padding-bottom: 100px;
     padding-left: 0;
     padding-right: 0;
     flex-direction: column;
+    align-items: center;
   }
 
   @include vp-767 {
-    padding-top: 65px;
+    padding-top: 55px;
     padding-bottom: 65px;
   }
 }
@@ -50,11 +50,13 @@
 .booking__description {
   width: calc(493 / 1040) * 100%;
   margin-right: calc(144 / 1040) * 100%;
+  padding-top: 163px;
 
   @include vp-1023 {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 45px;
+    margin-bottom: 38px;
+    padding-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,24 +64,25 @@
   }
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin-bottom: 17px;
   }
 }
 
 .booking__title {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 40px;
   line-height: 1.5;
 
   @include vp-1023 {
-    margin-bottom: 25px;
+    margin-bottom: 4px;
     font-size: 34px;
   }
 
   @include vp-767 {
     font-size: 24px;
+    margin-bottom: 6px;
   }
 }
 
@@ -95,7 +98,7 @@
   }
 
   @include vp-767 {
-    width: calc(257 / 290) * 100%;
+    width: 95%;
     font-size: 16px;
     margin-bottom: 10px;
   }

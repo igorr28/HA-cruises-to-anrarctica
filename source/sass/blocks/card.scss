@@ -25,7 +25,7 @@
   z-index: 10;
   width: 100%;
   height: 100%;
-  padding: 35px 25px;
+  padding: 27px 25px 35px;
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -35,13 +35,18 @@
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 
   @include vp-1023 {
-    padding: 35px;
+    padding: 29px 35px 35px;
+  }
+
+  @include vp-767 {
+    padding-left: 23px;
+    padding-right: 23px;
   }
 }
 
 .card__content h3 {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
@@ -54,12 +59,12 @@
 
 .card__content dt {
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .card__content dd {
   margin-left: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-weight: 40;
   color: #d8d8d9;
 }
@@ -113,7 +118,7 @@
 
 .card__figure-title {
   position: absolute;
-  bottom: 30px;
+  bottom: 23px;
   left: calc(30 / 260) * 100%;
   right: calc(30 / 260) * 100%;
   z-index: 5;
@@ -121,4 +126,9 @@
   font-size: 18px;
   line-height: 1.5;
   color: $color-alice-blue;
+
+  @include vp-767 {
+    bottom: 19px;
+    left: calc(25 / 260) * 100%;
+  }
 }

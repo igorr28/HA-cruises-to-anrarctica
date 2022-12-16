@@ -5,12 +5,12 @@
 
   @include vp-1023 {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 98px;
   }
 
   @include vp-767 {
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 59px;
+    padding-bottom: 62px;
     flex-direction: column;
     align-items: center;
   }
@@ -38,13 +38,13 @@
 
 .contacts__description {
   width: calc(500 / 1160) * 100%;
-  padding-top: 80px;
+  padding-top: 75px;
   display: flex;
   flex-direction: column;
 
   @include vp-1023 {
     width: calc(324 / 678) * 100%;
-    padding-top: 72px;
+    padding-top: 64px;
   }
 
   @include vp-767 {
@@ -56,7 +56,7 @@
 
 .contacts__description p {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
@@ -67,6 +67,10 @@
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+
+  @include vp-1023 {
+    margin-top: 14px;
+  }
 }
 
 .contacts__item {
@@ -89,16 +93,28 @@
     margin-bottom: 20px;
 
     @include vp-767 {
-      margin-bottom: 30px;
+      margin-bottom: 21px;
     }
 
     &::before {
       background-image: url("../img/svg/map-marker.svg");
+
+      @include vp-1023 {
+        margin-top: -15px;
+      }
     }
   }
 
   &--tel::before {
     background-image: url("../img/svg/map-tel.svg");
+  }
+}
+
+.contacts__item--address br {
+  display: none;
+
+  @include vp-1023 {
+    display: block;
   }
 }
 
@@ -112,4 +128,17 @@
 .contacts__list a {
   font-size: 16px;
   line-height: 150%;
+
+  &:hover {
+    color: $color-gorse;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-gorse;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }

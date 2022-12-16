@@ -26,6 +26,10 @@
   flex-shrink: 0;
   transition: transform $trans-default;
 
+  @include vp-767 {
+    margin-top: -8px;
+  }
+
   &::before {
     position: absolute;
     top: 0;
