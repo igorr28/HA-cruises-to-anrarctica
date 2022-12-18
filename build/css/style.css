@@ -645,6 +645,7 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   padding: 11px 15px 9px;
+  vertical-align: middle;
   font-family: inherit;
   font-size: 14px;
   line-height: 1.5;
@@ -2013,16 +2014,29 @@ button,
     position: static;
     display: block;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 35px;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
+  }
+
+  .is-menu-opened .main-header__.main-nav__list {
+    margin-top: -8px;
+    margin-bottom: -8px;
+  }
+
+  .is-menu-opened .main-nav__item {
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .main-header--no-js .main-nav__link,
   .is-menu-opened .main-nav__link {
     color: #011c40;
     text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   .main-header--no-js .main-nav__link:hover,
@@ -2055,6 +2069,7 @@ button,
 
   .is-menu-opened .main-header__nav {
     min-height: 460px;
+    padding-left: 11px;
     background-color: #f9fbfd;
   }
 
