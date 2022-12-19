@@ -6,10 +6,11 @@ const MARKER_OFSET = [-9, -22];
 const map = document.querySelector('[data-map]');
 
 const initMap = () => {
+  // отложенная загрузка карты
   setTimeout(function () {
     const elem = document.createElement('script');
     elem.src = 'https://api-maps.yandex.ru/2.1/?load=package.standard&apikey=5316c9d2-e4e3-49ac-b505-21d9271287c5&lang=ru_RU';
-    document.getElementsByTagName('body')[0].appendChild(elem);
+    document.body.append(elem);
     elem.addEventListener('load', () => {
       // eslint-disable-next-line no-undef
       ymaps.ready(init);
