@@ -68,6 +68,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: calc(40 / 1160) * 100%;
+  row-gap: 20px;
   list-style: none;
 
   @include vp-1023 {

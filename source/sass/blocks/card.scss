@@ -127,6 +127,10 @@
   line-height: 1.5;
   color: $color-alice-blue;
 
+  @include vp-1023 {
+    bottom: 27px;
+  }
+
   @include vp-767 {
     bottom: 19px;
     left: calc(25 / 260) * 100%;

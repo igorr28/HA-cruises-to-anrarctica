@@ -25,6 +25,7 @@
   background-color: $color-alice-blue;
   flex-shrink: 0;
   transition: transform $trans-default;
+  cursor: pointer;
 
   @include vp-767 {
     margin-top: -8px;
@@ -67,4 +68,5 @@
   font-size: 10px;
   line-height: 1.3;
   color: $color-alice-blue;
+  cursor: pointer;
 }
