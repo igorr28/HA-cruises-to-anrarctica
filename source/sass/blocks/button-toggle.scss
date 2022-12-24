@@ -11,9 +11,11 @@
     display: block;
   }
 
-  &:hover .button-toogle__img-open,
-  &:hover .button-toogle__img-close {
-    stroke: $color-gorse;
+  @include hover {
+    & .button-toogle__img-open,
+    & .button-toogle__img-close {
+      stroke: $color-gorse;
+    }
   }
 
   &:focus-visible {

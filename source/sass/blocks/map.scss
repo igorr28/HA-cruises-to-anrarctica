@@ -15,5 +15,10 @@
 }
 
 .map__img-wrapper img {
+  outline: 1px solid blue;
+  width: auto;
+  height: auto;
   max-width: none;
+  margin-top: -30px;
+  margin-left: -20px;
 }

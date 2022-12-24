@@ -2,6 +2,7 @@
   padding-top: 120px;
   padding-bottom: 120px;
   display: flex;
+  align-items: center;
 
   @include vp-1023 {
     padding-top: 100px;
@@ -12,11 +13,11 @@
     padding-top: 59px;
     padding-bottom: 62px;
     flex-direction: column;
-    align-items: center;
   }
 }
 
 .contacts__map {
+  outline: 1px solid red;
   width: calc(560 / 1160) * 100%;
   height: 306px;
   margin-right: calc(100 / 1160) * 100%;
@@ -29,7 +30,6 @@
 
   @include vp-767 {
     width: 100%;
-    max-width: 590px;
     height: 316px;
     margin-right: 0;
     order: 2;
@@ -38,18 +38,15 @@
 
 .contacts__description {
   width: calc(500 / 1160) * 100%;
-  padding-top: 75px;
   display: flex;
   flex-direction: column;
 
   @include vp-1023 {
     width: calc(324 / 678) * 100%;
-    padding-top: 64px;
   }
 
   @include vp-767 {
     width: 100%;
-    padding-top: 0;
     margin-bottom: 40px;
   }
 }

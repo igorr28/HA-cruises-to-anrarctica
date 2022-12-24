@@ -106,6 +106,8 @@
 
 .booking__form {
   width: calc(403 / 1040) * 100%;
+  min-width: 350px;
+  max-width: 403px;
 
   @include vp-1023 {
     width: calc(403 / 678) * 100%;
@@ -113,5 +115,6 @@
 
   @include vp-767 {
     width: 100%;
+    min-width: 260px;
   }
 }

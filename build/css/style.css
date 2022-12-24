@@ -629,7 +629,7 @@ button,
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
-  padding: 0 7.5402635432%;
+  padding: 0 103px;
 }
 
 .btn {
@@ -889,11 +889,6 @@ button,
   appearance: none;
 }
 
-.button-toogle:hover .button-toogle__img-open,
-.button-toogle:hover .button-toogle__img-close {
-  stroke: #ffd740;
-}
-
 .button-toogle:focus-visible {
   outline: 1px solid #ffd740;
   outline-offset: 2px;
@@ -960,19 +955,26 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .travel__content {
   width: 44.1379310345%;
   margin-right: 7.5862068966%;
-  padding-top: 58px;
 }
 
 .travel__img-wrapper {
   width: 48.275862069%;
+}
+
+.travel__img-wrapper picture {
+  width: 100%;
+}
+
+.travel__img {
+  width: 100%;
 }
 
 .travel__content h2 {
@@ -1248,6 +1250,8 @@ button,
 
 .booking__form {
   width: 38.75%;
+  min-width: 350px;
+  max-width: 403px;
 }
 
 .form {
@@ -1364,6 +1368,16 @@ button,
   align-items: center;
 }
 
+.control::after {
+  content: "";
+  width: 1px;
+  height: 1px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: block;
+}
+
 .control input {
   position: absolute;
   width: 1px;
@@ -1444,9 +1458,13 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .contacts__map {
+  outline: 1px solid red;
   width: 48.275862069%;
   height: 306px;
   margin-right: 8.6206896552%;
@@ -1454,7 +1472,6 @@ button,
 
 .contacts__description {
   width: 43.1034482759%;
-  padding-top: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1558,7 +1575,12 @@ button,
 }
 
 .map__img-wrapper img {
+  outline: 1px solid blue;
+  width: auto;
+  height: auto;
   max-width: none;
+  margin-top: -30px;
+  margin-left: -20px;
 }
 
 .main-footer {
@@ -1693,7 +1715,7 @@ button,
 
 @media (max-width: 1023px) {
   .container {
-    padding: 0 5.859375%;
+    padding: 0 45px;
   }
 
   .heading {
@@ -1760,12 +1782,14 @@ button,
 
   .travel__container {
     padding: 100px 0.7374631268% 79px 0;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
   }
 
   .travel__content {
     width: 47.7876106195%;
     margin-right: 3.6873156342%;
-    padding-top: 0;
   }
 
   .travel__img-wrapper {
@@ -1914,7 +1938,6 @@ button,
 
   .contacts__description {
     width: 47.7876106195%;
-    padding-top: 64px;
   }
 
   .contacts__list {
@@ -1982,7 +2005,7 @@ button,
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 4.6875%;
+    padding: 0 15px;
   }
 
   .heading {
@@ -2145,6 +2168,7 @@ button,
 
   .travel__content {
     width: 100%;
+    margin-right: 0;
   }
 
   .travel__img-wrapper {
@@ -2214,7 +2238,6 @@ button,
 
   .catalog__item {
     width: 100%;
-    max-width: 350px;
   }
 
   .catalog__item:not(:last-child) {
@@ -2261,6 +2284,7 @@ button,
 
   .booking__form {
     width: 100%;
+    min-width: 260px;
   }
 
   .form {
@@ -2276,10 +2300,6 @@ button,
     margin-bottom: 24px;
   }
 
-  .control__mark-checkbox {
-    margin-top: -8px;
-  }
-
   .contacts__container {
     padding-top: 59px;
     padding-bottom: 62px;
@@ -2287,14 +2307,10 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 
   .contacts__map {
     width: 100%;
-    max-width: 590px;
     height: 316px;
     margin-right: 0;
     -webkit-box-ordinal-group: 3;
@@ -2304,7 +2320,6 @@ button,
 
   .contacts__description {
     width: 100%;
-    padding-top: 0;
     margin-bottom: 40px;
   }
 
@@ -2369,5 +2384,12 @@ button,
 
   .booking {
     background-image: url("../img/form-bg-mobile@2x.webp");
+  }
+}
+
+@media (hover: hover) {
+  .button-toogle:hover:not(.focus-visible) .button-toogle__img-open,
+  .button-toogle:hover:not(.focus-visible) .button-toogle__img-close {
+    stroke: #ffd740;
   }
 }

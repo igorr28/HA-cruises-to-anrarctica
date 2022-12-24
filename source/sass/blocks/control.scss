@@ -1,6 +1,14 @@
 .control {
   display: flex;
   align-items: center;
+
+  &::after {
+    content: "";
+    width: 1px;
+    height: 1px;
+    flex-grow: 1;
+    display: block;
+  }
 }
 
 .control input {
@@ -26,10 +34,6 @@
   flex-shrink: 0;
   transition: transform $trans-default;
   cursor: pointer;
-
-  @include vp-767 {
-    margin-top: -8px;
-  }
 
   &::before {
     position: absolute;
