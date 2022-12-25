@@ -1,10 +1,3 @@
-.main-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 .main-header__container {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -29,12 +22,6 @@
 .main-header__nav {
   @include vp-767 {
     display: none;
-  }
-}
-
-.main-header--no-js.main-header {
-  @include vp-767 {
-    position: static;
   }
 }
 
@@ -64,7 +51,20 @@
   }
 }
 
-.main-header--no-js .main-nav__link,
+.main-header--no-js .main-nav__link {
+  @include vp-767 {
+    color: $color-alice-blue;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    &:hover {
+      color: $color-gorse;
+    }
+  }
+}
+
 .is-menu-opened .main-nav__link {
   @include vp-767 {
     color: $color-default-text;
@@ -91,13 +91,39 @@
     top: 0;
     left: 35px;
     right: 0;
+    z-index: 10;
+    height: 100vh;
+    align-content: flex-start;
     padding-left: 15px;
     padding-right: 15px;
     background-color: $color-alice-blue;
+    overflow: auto;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -36px;
+    bottom: 0;
+    right: 100%;
+    z-index: -2;
+    content: none;
+    background-color: rgba(0, 43, 102, 0.5);
+    }
+}
+
+.is-menu-opened .main-header__container::before {
+  @include vp-767 {
+    content: "";
   }
 }
 
-.main-header--no-js .logo__img,
+.main-header--no-js .logo__img {
+  @include vp-767 {
+    fill: $color-alice-blue;
+  }
+}
+
 .is-menu-opened .logo__img {
   @include vp-767 {
     fill: $color-default-text;
@@ -112,7 +138,6 @@
 
 .is-menu-opened .main-header__nav {
   @include vp-767 {
-    min-height: 460px;
     padding-left: 11px;
     background-color: $color-alice-blue;
   }

@@ -1,6 +1,8 @@
 import {FocusLock} from '../utils/focus-lock.js';
+import {ScrollLock} from '../utils/scroll-lock.js';
 
 const focusLock = new FocusLock();
+const scrollLock = new ScrollLock();
 
 const initMainMenu = () => {
   const header = document.querySelector('[data-header]');
@@ -9,16 +11,16 @@ const initMainMenu = () => {
 
   const openMenu = () => {
     header.classList.add('is-menu-opened');
-    document.body.style.overflow = 'hidden';
     focusLock.lock('.header');
+    scrollLock.disableScrolling();
     document.addEventListener('keydown', onMenuKeydownEsc);
     document.addEventListener('click', onClickMenuOut);
   };
 
   const closeMenu = () => {
     header.classList.remove('is-menu-opened');
-    document.body.style.overflow = '';
     focusLock.unlock();
+    scrollLock.enableScrolling();
     document.removeEventListener('keydown', onMenuKeydownEsc);
     document.removeEventListener('click', onClickMenuOut);
   };

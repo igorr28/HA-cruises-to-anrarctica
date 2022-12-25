@@ -806,11 +806,14 @@ button,
   cursor: pointer;
 }
 
-.main-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+.page-top {
+  background-color: #1c6dee;
+  background-image: url("../img/promo-bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f9fbfd;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .main-header__container {
@@ -825,6 +828,17 @@ button,
 
 .main-header__logo {
   margin-right: auto;
+}
+
+.is-menu-opened .main-header__container::before {
+  position: absolute;
+  top: 0;
+  left: -36px;
+  bottom: 0;
+  right: 100%;
+  z-index: -2;
+  content: none;
+  background-color: rgba(0, 43, 102, 0.5);
 }
 
 .logo__img {
@@ -917,16 +931,6 @@ button,
   -webkit-transition: stroke 0.3s ease;
   -o-transition: stroke 0.3s ease;
   transition: stroke 0.3s ease;
-}
-
-.promo {
-  background-color: #1c6dee;
-  background-image: url("../img/promo-bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #f9fbfd;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .promo__container {
@@ -1224,12 +1228,14 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .booking__description {
   width: 47.4038461538%;
   margin-right: 13.8461538462%;
-  padding-top: 163px;
 }
 
 .booking__title {
@@ -1464,7 +1470,6 @@ button,
 }
 
 .contacts__map {
-  outline: 1px solid red;
   width: 48.275862069%;
   height: 306px;
   margin-right: 8.6206896552%;
@@ -1494,6 +1499,9 @@ button,
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
 }
 
 .contacts__item {
@@ -1515,10 +1523,6 @@ button,
   content: "";
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.contacts__item--address {
-  margin-bottom: 20px;
 }
 
 .contacts__item--address::before {
@@ -1575,12 +1579,9 @@ button,
 }
 
 .map__img-wrapper img {
-  outline: 1px solid blue;
-  width: auto;
-  height: auto;
   max-width: none;
-  margin-top: -30px;
-  margin-left: -20px;
+  margin-top: -84px;
+  margin-left: -25px;
 }
 
 .main-footer {
@@ -1700,7 +1701,7 @@ button,
 */
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
-  .promo {
+  .page-top {
     background-image: url("../img/promo-bg@2x.webp");
   }
 
@@ -1720,6 +1721,12 @@ button,
 
   .heading {
     font-size: 26px;
+  }
+
+  .page-top {
+    background-image: url("../img/promo-bg-tablet.webp");
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 
   .main-header__container {
@@ -1756,12 +1763,6 @@ button,
   .main-nav__link--footer {
     font-size: 12px;
     line-height: 15px;
-  }
-
-  .promo {
-    background-image: url("../img/promo-bg-tablet.webp");
-    -webkit-box-shadow: none;
-    box-shadow: none;
   }
 
   .promo__container {
@@ -1889,16 +1890,12 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
 
   .booking__description {
     width: 100%;
     margin-right: 0;
     margin-bottom: 38px;
-    padding-top: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1952,6 +1949,11 @@ button,
     display: block;
   }
 
+  .map__img-wrapper img {
+    margin-top: -74px;
+    margin-left: -125px;
+  }
+
   .main-footer__container {
     padding-bottom: 47px;
   }
@@ -1990,7 +1992,7 @@ button,
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .promo {
+  .page-top {
     background-image: url("../img/promo-bg-tablet@2x.webp");
   }
 
@@ -2034,10 +2036,6 @@ button,
     display: none;
   }
 
-  .main-header--no-js.main-header {
-    position: static;
-  }
-
   .main-header--no-js .main-header__nav,
   .is-menu-opened .main-header__nav {
     position: static;
@@ -2059,7 +2057,18 @@ button,
     margin-bottom: 8px;
   }
 
-  .main-header--no-js .main-nav__link,
+  .main-header--no-js .main-nav__link {
+    color: #f9fbfd;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .main-header--no-js .main-nav__link:hover {
+    color: #ffd740;
+  }
+
   .is-menu-opened .main-nav__link {
     color: #011c40;
     text-align: left;
@@ -2068,7 +2077,6 @@ button,
     line-height: 22px;
   }
 
-  .main-header--no-js .main-nav__link:hover,
   .is-menu-opened .main-nav__link:hover {
     color: #ffd740;
   }
@@ -2082,12 +2090,24 @@ button,
     top: 0;
     left: 35px;
     right: 0;
+    z-index: 10;
+    height: 100vh;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
     padding-left: 15px;
     padding-right: 15px;
     background-color: #f9fbfd;
+    overflow: auto;
   }
 
-  .main-header--no-js .logo__img,
+  .is-menu-opened .main-header__container::before {
+    content: "";
+  }
+
+  .main-header--no-js .logo__img {
+    fill: #f9fbfd;
+  }
+
   .is-menu-opened .logo__img {
     fill: #011c40;
   }
@@ -2097,7 +2117,6 @@ button,
   }
 
   .is-menu-opened .main-header__nav {
-    min-height: 460px;
     padding-left: 11px;
     background-color: #f9fbfd;
   }
@@ -2323,8 +2342,13 @@ button,
     margin-bottom: 40px;
   }
 
-  .contacts__item--address {
-    margin-bottom: 21px;
+  .contacts__list {
+    row-gap: 21px;
+  }
+
+  .map__img-wrapper img {
+    margin-top: -104px;
+    margin-left: -27px;
   }
 
   .main-footer__container {
@@ -2359,8 +2383,15 @@ button,
   }
 }
 
+@media (max-width: 510px) {
+  .map__img-wrapper img {
+    margin-top: -104px;
+    margin-left: -192px;
+  }
+}
+
 @media (max-width: 374px) {
-  .promo {
+  .page-top {
     background-image: url("../img/promo-bg-mobile.webp");
   }
 
@@ -2374,7 +2405,7 @@ button,
 }
 
 @media (max-width: 374px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 374px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 374px) and (min-resolution: 144dpi), (max-width: 374px) and (min-resolution: 1.5dppx) {
-  .promo {
+  .page-top {
     background-image: url("../img/promo-bg-mobile@2x.webp");
   }
 

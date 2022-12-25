@@ -1,34 +1,34 @@
-.promo {
-  background-color: $color-dodger-blue;
-  background-image: url("../img/promo-bg.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $color-alice-blue;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+// .promo {
+//   background-color: $color-dodger-blue;
+//   background-image: url("../img/promo-bg.webp");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   color: $color-alice-blue;
+//   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
-  @media (min-width: (1024px)) {
-    @include retina {
-      background-image: url("../img/promo-bg@2x.webp");
-    }
-  }
+//   @media (min-width: (1024px)) {
+//     @include retina {
+//       background-image: url("../img/promo-bg@2x.webp");
+//     }
+//   }
 
-  @include vp-1023 {
-    background-image: url("../img/promo-bg-tablet.webp");
-    box-shadow: none;
+//   @include vp-1023 {
+//     background-image: url("../img/promo-bg-tablet.webp");
+//     box-shadow: none;
 
-    @include retina {
-      background-image: url("../img/promo-bg-tablet@2x.webp");
-    }
-  }
+//     @include retina {
+//       background-image: url("../img/promo-bg-tablet@2x.webp");
+//     }
+//   }
 
-  @include vp-374 {
-    background-image: url("../img/promo-bg-mobile.webp");
+//   @include vp-374 {
+//     background-image: url("../img/promo-bg-mobile.webp");
 
-    @include retina {
-      background-image: url("../img/promo-bg-mobile@2x.webp");
-    }
-  }
-}
+//     @include retina {
+//       background-image: url("../img/promo-bg-mobile@2x.webp");
+//     }
+//   }
+// }
 
 .promo__container {
   padding: 268px 95px 258px;

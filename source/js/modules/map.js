@@ -16,7 +16,7 @@ const initMap = () => {
       ymaps.ready(init);
     }
     );
-  }, 4000);
+  }, 3000);
 
   function init() {
     map.classList.remove('map--no-js');
@@ -25,6 +25,9 @@ const initMap = () => {
     let myMap = new ymaps.Map(map, {
       center: CENTER_COORDS,
       zoom: DEFAULT_SCALE,
+      controls: ['zoomControl', 'typeSelector', 'fullscreenControl', 'routeButtonControl']
+    }, {
+      searchControlProvider: 'yandex#search'
     });
 
     // eslint-disable-next-line no-undef
