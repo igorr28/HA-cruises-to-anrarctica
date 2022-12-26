@@ -4,6 +4,7 @@ import {initMainMenu} from './modules/burger-menu.js';
 import {initFormValidation} from './modules/form-validation';
 import {initMap} from './modules/map';
 import {scrollTo} from './modules/smooth-scroll';
+import {initMask} from './modules/mask-phone';
 
 // ---------------------------------
 
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initFormValidation();
   scrollTo();
   initMap();
+  initMask();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

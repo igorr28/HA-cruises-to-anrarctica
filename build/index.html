@@ -25,41 +25,43 @@
         <!-- Header -->
         <header class="main-header header main-header--no-js" data-header>
           <div class="container">
-            <div class="main-header__container">
-              <!-- logo -->
-              <a class="logo main-header__logo">
-                <svg class="logo__img"  width="70" height="38" aria-hidden="true">
-                  <use xlink:href="img/sprite_auto.svg#logo"></use>
-                </svg>
-                <span class="visually-hidden">Логотип сайта "Круизы в Антарктику".</span>
-              </a>
-              <!-- Navigation -->
-              <nav class="main-nav main-header__nav">
-                <ul class="main-nav__list">
-                  <li class="main-nav__item">
-                    <a href="#advantages" class="main-nav__link" data-scroll data-nav-link>Преимущества</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a href="#booking" class="main-nav__link" data-scroll data-nav-link>Направления</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a href="#cruises" class="main-nav__link" data-scroll data-nav-link>Ближайшие круизы</a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a href="#contacts" class="main-nav__link" data-scroll data-nav-link>Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-              <!-- Burger-menu -->
-              <button class="main-header__button-toogle button-toogle" type="button" data-burger="closed">
-                <svg class="button-toogle__img-open" width="24" height="14" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite_auto.svg#burger"></use>
-                </svg>
-                <svg class="button-toogle__img-close" width="13" height="13" aria-hidden="true" focusable="false">
-                  <use xlink:href="img/sprite_auto.svg#burger-close"></use>
-                </svg>
-                <span class="visually-hidden">Переключить состояние меню.</span>
-              </button>
+            <div class="main-header__overlay">
+              <div class="main-header__container">
+                <!-- logo -->
+                <a class="logo main-header__logo">
+                  <svg class="logo__img"  width="70" height="38" aria-hidden="true">
+                    <use xlink:href="img/sprite_auto.svg#logo"></use>
+                  </svg>
+                  <span class="visually-hidden">Логотип сайта "Круизы в Антарктику".</span>
+                </a>
+                <!-- Navigation -->
+                <nav class="main-nav main-header__nav">
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                      <a href="#advantages" class="main-nav__link" data-scroll data-nav-link>Преимущества</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="#booking" class="main-nav__link" data-scroll data-nav-link>Направления</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="#cruises" class="main-nav__link" data-scroll data-nav-link>Ближайшие круизы</a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="#contacts" class="main-nav__link" data-scroll data-nav-link>Контакты</a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- Burger-menu -->
+                <button class="main-header__button-toogle button-toogle" type="button" data-burger="closed">
+                  <svg class="button-toogle__img-open" width="24" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#burger"></use>
+                  </svg>
+                  <svg class="button-toogle__img-close" width="13" height="13" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite_auto.svg#burger-close"></use>
+                  </svg>
+                  <span class="visually-hidden">Переключить состояние меню.</span>
+                </button>
+              </div>
             </div>
           </div>
         </header>
@@ -368,11 +370,20 @@
                 <label class="visually-hidden" for="email">Введите email.</label>
                 <input type="email" id="email" name="email" data-validate placeholder="Email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" title="Введите корректный электронный адрес" required>
 
-                <label class="form__control control">
+                <!-- <label class="form__control control">
                   <input type="checkbox" name="consent" data-validate required>
                   <span class="control__mark-checkbox"></span>
                   <span class="control__label">Я согласен на&nbsp;обработку моих&nbsp;персональных данных</span>
-                </label>
+                  Я согласен на&nbsp;обработку моих&nbsp;персональных данных
+                </label> -->
+
+                <div class="form__checkbox">
+                  <input type="checkbox" name="consent" data-validate required>
+                  <label class="form__checkbox-label">
+                    <span class="form__checkbox-mark"></span>
+                    Я согласен на&nbsp;обработку моих&nbsp;персональных данных
+                  </label>
+                </div>
 
                 <button class="btn form__button" type="submit">Оставить заявку</button>
               </form>

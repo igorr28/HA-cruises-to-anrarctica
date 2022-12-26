@@ -99,22 +99,15 @@
     background-color: $color-alice-blue;
     overflow: auto;
   }
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: -36px;
-    bottom: 0;
-    right: 100%;
-    z-index: -2;
-    content: none;
-    background-color: rgba(0, 43, 102, 0.5);
-    }
 }
 
-.is-menu-opened .main-header__container::before {
-  @include vp-767 {
-    content: "";
+.is-menu-opened .main-header__overlay {
+  @include vp-767 {position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 43, 102, 0.5);
   }
 }
 

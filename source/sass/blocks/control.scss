@@ -1,16 +1,13 @@
-.control {
-  display: flex;
-  align-items: center;
+.control,
+.form__checkbox {
+  // display: flex;
+  // align-items: center;
 
-  &::after {
-    content: "";
-    width: 1px;
-    height: 1px;
-    flex-grow: 1;
-    display: block;
-  }
+
+  padding-left: 28px;
+  position: relative;
 }
-
+.form__checkbox input,
 .control input {
   position: absolute;
   width: 1px;
@@ -24,14 +21,27 @@
   clip-path: inset(100%);
 }
 
-.control__mark-checkbox {
-  position: relative;
-  display: block;
+.form__checkbox-label {
+
+  font-size: 10px;
+  line-height: 1.3;
+  color: $color-alice-blue;
+  cursor: pointer;
+
+}
+
+.control__mark-checkbox,
+.form__checkbox-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  vertical-align: middle;
   width: 18px;
   height: 18px;
   margin-right: 5px;
   background-color: $color-alice-blue;
-  flex-shrink: 0;
+  //flex-shrink: 0;
   transition: transform $trans-default;
   cursor: pointer;
 
@@ -54,12 +64,12 @@
 }
 
 .control input:hover + .control__mark-checkbox {
-  transform: scale(1.3);
+  transform: scale(1.15);
 }
 
 .control input:focus + .control__mark-checkbox {
   outline: 2px solid $color-gorse;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .control input:disabled + .control__mark-checkbox {
