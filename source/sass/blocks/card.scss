@@ -28,7 +28,7 @@
   padding: 27px 25px 35px;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  //overflow: auto;
   background-color: $color-default-text;
   color: $color-alice-blue;
   transition: $trans-default;
@@ -39,8 +39,17 @@
   }
 
   @include vp-767 {
-    padding-left: 23px;
-    padding-right: 23px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.card__desc {
+  overflow: auto;
+  margin-bottom: 10px;
+
+  &::-webkit-scrollbar {
+    width: 0;
   }
 }
 
@@ -50,6 +59,10 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
+
+  @include vp-767 {
+    margin-bottom: 14px;
+  }
 }
 
 .card__content dl {
@@ -132,7 +145,7 @@
   }
 
   @include vp-767 {
-    bottom: 19px;
+    bottom: 18px;
     left: calc(25 / 260) * 100%;
   }
 }

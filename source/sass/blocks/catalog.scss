@@ -4,17 +4,18 @@
 
   @include vp-1023 {
     padding-top: 89px;
-    padding-bottom: 100px;
+    padding-bottom: 99px;
   }
 
   @include vp-767 {
-    padding-top: 57px;
+    padding-top: 56px;
     padding-bottom: 64px;
   }
 }
 
 .catalog__title {
   margin-top: 0;
+  margin-bottom: 48px;
 
 
   @include vp-1023 {
@@ -61,7 +62,7 @@
 
   &:not(:last-child) {
     @include vp-767 {
-      margin-bottom: 29px;
+      margin-bottom: 30px;
     }
   }
 }

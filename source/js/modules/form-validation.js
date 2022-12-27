@@ -36,16 +36,6 @@ const checkFormElement = (elem) => {
   }
 };
 
-const getCoords = (elem) => {
-  let box = elem.getBoundingClientRect();
-  return {
-    top: box.top + window.pageYOffset,
-    right: box.right + window.pageXOffset,
-    bottom: box.bottom + window.pageYOffset,
-    left: box.left + window.pageXOffset,
-  };
-};
-
 const showErrorElem = (elem, message) => {
   const errorElem = document.createElement('span');
 
@@ -55,12 +45,9 @@ const showErrorElem = (elem, message) => {
     errorElem.classList.add('form__error');
   }
   errorElem.textContent = message;
-  let coords = getCoords(elem);
-  errorElem.style.left = coords.left + 'px';
-  errorElem.style.top = coords.bottom + 'px';
-  errorElem.style.width = elem.offsetWidth * 0.9 + 'px';
+  let parent = elem.closest('.form__row');
   errorElem.dataset.nameField = (elem.tagName === 'LABEL') ? elem.firstElementChild.name : elem.name;
-  document.body.append(errorElem);
+  parent.append(errorElem);
 };
 
 const resetErrorElem = (elem) => {

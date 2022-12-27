@@ -1,5 +1,6 @@
 .main-nav {
   max-width: 670px;
+  margin-right: 2px;
 
   @include vp-1023 {
     max-width: 600px;
@@ -45,6 +46,11 @@
     margin-right: 0;
     max-width: none;
   }
+}
+
+.main-footer .main-nav__item {
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .main-nav__link {

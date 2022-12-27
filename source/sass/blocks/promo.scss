@@ -31,14 +31,14 @@
 // }
 
 .promo__container {
-  padding: 268px 95px 258px;
+  padding: 158px 95px 255px;
 
   @include vp-1023 {
-    padding: 267px 0 254px;
+    padding: 183px 0 253px;
   }
 
   @include vp-767 {
-    padding: 176px 0 168px;
+    padding: 109px 0 168px;
   }
 }
 
