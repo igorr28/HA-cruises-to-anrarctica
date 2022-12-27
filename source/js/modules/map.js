@@ -25,9 +25,9 @@ const initMap = () => {
     let myMap = new ymaps.Map(map, {
       center: CENTER_COORDS,
       zoom: DEFAULT_SCALE,
-      controls: ['zoomControl', 'typeSelector', 'fullscreenControl', 'routeButtonControl']
+      controls: ['zoomControl', 'typeSelector', 'fullscreenControl', 'routeButtonControl'],
     }, {
-      searchControlProvider: 'yandex#search'
+      searchControlProvider: 'yandex#search',
     });
 
     // eslint-disable-next-line no-undef

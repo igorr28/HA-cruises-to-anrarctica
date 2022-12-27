@@ -30,10 +30,9 @@
 
 .booking__container {
   padding: 49px calc(60 / 1160) * 100%;
-  //display: flex;
   display: grid;
   grid-template-columns: 1fr 403px;
-  column-gap: calc(134 / 1040) * 100% ;
+  column-gap: calc(134 / 1040) * 100%;
   align-items: center;
 
   @include vp-1023 {
@@ -43,7 +42,6 @@
     padding-right: 0;
     grid-template-columns: auto;
     justify-content: center;
-    //flex-direction: column;
   }
 
   @include vp-767 {
@@ -53,8 +51,6 @@
 }
 
 .booking__description {
- // width: calc(493 / 1040) * 100%;
-  //margin-right: calc(144 / 1040) * 100%;
   margin-top: 7px;
 
   @include vp-1023 {
@@ -87,7 +83,7 @@
   @include vp-767 {
     font-size: 24px;
     line-height: 1.4;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 }
 
@@ -118,9 +114,6 @@
 }
 
 .booking__form-wrapper {
-  //width: calc(403 / 1040) * 100%;
-  //min-width: 365px;
-  //max-width: 403px;
   padding: 45px 50px 51px;
   background-color: $color-default-text;
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
@@ -131,7 +124,6 @@
   }
 
   @include vp-767 {
-    //width: 100%;
     min-width: 260px;
     padding: 35px 30px 40px;
   }

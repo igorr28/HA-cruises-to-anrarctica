@@ -33,7 +33,6 @@
 
 .travel__img-wrapper {
   width: calc(560 / 1160) * 100%;
-  //min-width: 445px;
 
   @include vp-1023 {
     width: calc(324 / 678) * 100%;

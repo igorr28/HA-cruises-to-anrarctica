@@ -6,12 +6,12 @@
 
   @include vp-1023 {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 101px;
   }
 
   @include vp-767 {
     padding-top: 59px;
-    padding-bottom: 63px;
+    padding-bottom: 61px;
     flex-direction: column;
   }
 }
@@ -76,7 +76,7 @@
   }
 }
 
-.contacts__item {
+.contacts__item--address {
   display: flex;
   align-items: center;
 
@@ -87,25 +87,13 @@
     margin-right: 10px;
     flex-shrink: 0;
     content: "";
-
+    background-image: url("../img/svg/map-marker.svg");
     background-repeat: no-repeat;
     background-position: center;
-  }
 
-  &--address {
-
-
-    &::before {
-      background-image: url("../img/svg/map-marker.svg");
-
-      @include vp-1023 {
-        margin-top: -15px;
-      }
+    @include vp-1023 {
+      margin-top: -15px;
     }
-  }
-
-  &--tel::before {
-    background-image: url("../img/svg/map-tel.svg");
   }
 }
 
@@ -117,6 +105,11 @@
   }
 }
 
+.contacts__item--tel svg {
+  margin-right: 10px;
+  fill: $color-default-text;
+}
+
 .contacts__list address {
   font-style: normal;
   font-weight: 400;
@@ -125,11 +118,19 @@
 }
 
 .contacts__list a {
+  display: inline-flex;
+  align-items: center;
   font-size: 16px;
   line-height: 150%;
 
-  &:hover {
+  @include hover {
     color: $color-gorse;
+  }
+
+  @include hover {
+    svg {
+      fill: $color-gorse;
+    }
   }
 
   &:focus-visible {

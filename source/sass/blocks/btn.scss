@@ -17,7 +17,7 @@
   cursor: pointer;
   transition: $trans-default;
 
-  &:hover {
+  @include hover {
     background-color: $color-gorse;
   }
 

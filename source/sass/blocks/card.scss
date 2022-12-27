@@ -8,11 +8,6 @@
     left: 0;
   }
 
-  &:focus-visible {
-    outline: 2px solid $color-gorse;
-    outline-offset: 2px;
-  }
-
   &:hover figure {
     transform: translateX(100%);
   }
@@ -28,7 +23,6 @@
   padding: 27px 25px 35px;
   display: flex;
   flex-direction: column;
-  //overflow: auto;
   background-color: $color-default-text;
   color: $color-alice-blue;
   transition: $trans-default;

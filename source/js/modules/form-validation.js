@@ -78,6 +78,10 @@ const initFormValidation = () => {
         if (target.hasAttribute('data-validate')) {
           checkFormElement(target);
         }
+
+        setTimeout(function () {
+          resetErrorElem(target);
+        }, 5000);
       });
 
       form.addEventListener('click', (e) => {
@@ -90,6 +94,9 @@ const initFormValidation = () => {
           formElements.forEach((elem) => {
             if (elem.hasAttribute('data-validate')) {
               checkFormElement(elem);
+              setTimeout(function () {
+                resetErrorElem(elem);
+              }, 5000);
 
               if (elem.classList.contains('is-error')) {
                 arrayValidElements.push(false);
