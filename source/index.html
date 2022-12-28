@@ -88,8 +88,12 @@
               </div>
               <div class="travel__img-wrapper">
                 <picture>
-                  <source  type="image/webp" srcset="./img/promo.webp 1x, ./img/promo@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/promo-mobile.webp 1x, img/promo-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/promo-tablet.webp 1x, img/promo-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/promo.webp 1x, img/promo@2x.webp 2x">
 
+                  <source type="image/jpg" width="290" height="156" media="(max-width: 767px)" srcset="img/promo-mobile.jpg 1x, img/promo-mobile@2x.jpg 2x">
+                  <source type="image/jpg" width="324" height="175" media="(max-width: 1023px)" srcset="img/promo-tablet.jpg 1x, img/promo-tablet@2x.jpg 2x">
                   <img class="travel__img" src="./img/promo.jpg" srcset="./img/promo@2x.jpg 2x" width="560" height="301" loading="lazy" alt="Три пингвина">
                 </picture>
               </div>

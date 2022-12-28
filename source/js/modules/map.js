@@ -16,7 +16,7 @@ const initMap = () => {
       ymaps.ready(init);
     }
     );
-  }, 3000);
+  }, 4000);
 
   function init() {
     map.classList.remove('map--no-js');

@@ -1840,6 +1840,7 @@ button,
     -webkit-column-gap: 4.6296296296%;
     -moz-column-gap: 4.6296296296%;
     column-gap: 4.6296296296%;
+    row-gap: 29px;
   }
 
   .card__content {

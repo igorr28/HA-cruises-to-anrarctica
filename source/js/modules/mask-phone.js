@@ -16,7 +16,7 @@ const initMask = () => {
       }
     }
     );
-  }, 3000);
+  }, 4000);
 };
 
 export {initMask};

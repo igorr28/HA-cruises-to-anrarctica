@@ -43,6 +43,7 @@
     padding-right: calc(15 / 678) * 100%;
     grid-template-columns: repeat(2, calc(309 / 648) * 100%);
     column-gap: calc(30 / 648) * 100%;
+    row-gap: 29px;
   }
 
   @include vp-767 {
