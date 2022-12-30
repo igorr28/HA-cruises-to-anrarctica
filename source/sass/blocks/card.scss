@@ -123,6 +123,14 @@
   }
 }
 
+.card__figure--avrora img {
+  margin-left: -110px;
+
+  @include vp-1023 {
+    margin-left: -105px;
+  }
+}
+
 .card__figure-title {
   position: absolute;
   bottom: 23px;

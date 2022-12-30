@@ -1196,6 +1196,10 @@ button,
   height: 100%;
 }
 
+.card__figure--avrora img {
+  margin-left: -110px;
+}
+
 .card__figure-title {
   position: absolute;
   bottom: 23px;
@@ -1853,6 +1857,10 @@ button,
 
   .card__figure img {
     margin-left: -96px;
+  }
+
+  .card__figure--avrora img {
+    margin-left: -105px;
   }
 
   .card__figure-title {
